@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+                /* Palet */
+    --Gray:            hsl(0, 0%, 59%);
+    --Blue:            hsl(223, 87%, 63%);
+    --White:           hsl(0, 0%, 100%);
+    --PaleBlue:        hsl(223, 100%, 88%);
+    --LightRed:        hsl(354, 100%, 66%);
+    --VeryDarkBlue:    hsl(209, 33%, 12%);
+                /* Font-Size-Body */    
+    --BodyFontSize: 20px;
+                /* Font-Family */
+    --BodyFontFam: 'Libre Franklin', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;     
+}
+
+body {
+    background-color: var(--White);
+    font-family: var(--BodyFontFam);    
+    font-size: var(--BodyFontSize);
+}
+
+.mainContainer {      
+    margin: 85px auto 60px;
+}
+
+.sectionOne__logoImage {
+    width: 52px;
+    display: block;  
+    margin: 0 auto 40px; 
+}
+
+h1 {
+    font-size: 1.2em;   
+    font-weight: 300;
+    color: var(--Gray);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+h1 span {
+    color: var(--VeryDarkBlue);
+    font-weight: 700;
+}
+
+.sectionOne__paragraph {
+    text-align: center;
+    font-size: 0.65em;
+    margin-bottom: 36px;
+}
+
+form {    
+    width: 282px;
+    margin: auto;    
+}
+
+input[type="email"] {  
+    width: 100%;
+    height: 40px;
+    border-radius: 32px;
+    margin-bottom: 3px;
+    border: 1px solid var(--Gray);
+    padding-left: 24px;
+}
+
+input[type="email"]:focus {
+    outline: none;  
+}
+
+#error {
+    color: var(--LightRed);
+    font-style: italic;
+    font-size: 0.65em;
+    text-align: center;
+    visibility: hidden;
+} 
+
+input[type="submit"] {
+    background-color: var(--Blue);
+    width: 100%;
+    height: 40px;
+    border-radius: 32px;
+    border: none;
+    font-weight: 700;
+    margin-bottom: 70px;
+    box-shadow: 3px 3px 5px var(--Blue);
+    color: var(--White);
+}  
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.sectionTwo__dashboardImg {
+    width: 322px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.sectionTwo__socialMedia__container {
+    width: 150px;   
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.sectionTwo__socialMedia__container a {
+    text-decoration: none;
+    display: grid;
+    place-content: center;   
+}
+
+.iconContainer {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--Blue);
+    border-radius: 50px; 
+    color: var(--Blue); 
+}
+
+.iconContainer:hover {
+    background-color: var(--Blue);
+    fill: var(--PaleBlue);
+    color: var(--White);
+}
+
+.sectionTwo__paragraphCopy {
+    text-align: center;
+    color: var(--Gray);
+    font-size: 0.6em;
+}
+
+/* FOOTER */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+/* DESKTOP */
+
+@media (min-width: 700px) {
+    .mainContainer {      
+        margin: 65px auto 40px;
+    }
+
+    .sectionOne__logoImage {
+        width: 96px;
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-top: -20px;
+    }
+
+    .sectionOne__paragraph {
+        font-size: 1.05em;
+        font-weight: 300;
+    }
+    form {
+        width: 638px;
+        display: flex;
+        justify-content: space-between;        
+    }
+
+    input[type="email"] {
+        width: 420px;
+        height: 55px;
+        font-size: 0.8em;
+    } 
+
+    #error {
+        text-align: left;
+        padding-left: 24px;        
+    }
+    
+    input[type="submit"] {
+        width: 200px;
+        height: 55px;
+        margin-bottom: 90px;
+        font-size: 0.8em;
+    }
+
+    .sectionTwo {
+        margin-top: -20px;
+    }
+
+    .sectionTwo__dashboardImg {
+        width: 640px;
+        margin-bottom: 74px;
+        margin-top: 0;
+    }
+
+    .iconContainer {
+        margin-top: -30px;
+    }
+}
